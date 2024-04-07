@@ -1,0 +1,105 @@
+/* styles.css */
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centralizar verticalmente */
+}
+
+header h1 {
+    margin: 0;
+    text-align: center; /* Centralizar horizontalmente */
+    flex-grow: 1; /* Para ocupar o espaço restante */
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    display: none; /* Escondendo a barra lateral inicialmente */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    margin-left: 220px; /* Considerando a largura da barra lateral */
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para a página inicial */
+.section-home {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+}
+
+.section-home h2 {
+    color: #333;
+}
+
+.section-home p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: block;
+    width: 150px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.final{
+    font-size: 0.8rem;
+}
