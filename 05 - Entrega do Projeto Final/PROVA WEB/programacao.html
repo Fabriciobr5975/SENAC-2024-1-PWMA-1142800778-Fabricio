@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Definição do conjunto de caracteres e configuração de viewport para responsividade -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da página e link para o arquivo CSS -->
+    <title>Programação de Filmes - Festival de Cinema de Gramado</title>
+    <link rel="stylesheet" href="programacao.css" />
+</head>
+<body>
+    <!-- Cabeçalho da página com título e botão de menu -->
+    <header>
+        <h1>Festival de Cinema de Gramado</h1>
+        <button id="toggleMenu">Menu</button>
+    </header>
+
+    <!-- Barra lateral de navegação com links para outras páginas -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="homepage.html">Página Inicial</a></li>
+            <li><a href="submissao.html">Submissão de Filmes</a></li>
+            <li><a href="avaliacao.html">Avaliação de Filmes</a></li>
+            <li><a href="programacao.html">Programação e Agendamento</a></li>
+            <li><a href="venda_ingressos.html">Venda de Ingressos</a></li>
+            <li><a href="eventos_paralelos.html">Gestão de Eventos Paralelos</a></li>
+            <li><a href="sobre_nos.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção principal da página com seletor de data e lista de filmes -->
+    <main>
+        <section id="movieSchedule">
+            <h2>Escolha a Data</h2>
+            <select id="dateSelector">
+                <option value="2024-04-01">1 de Abril de 2024</option>
+                <option value="2024-04-02">2 de Abril de 2024</option>
+                <option value="2024-04-03">3 de Abril de 2024</option>
+                <!-- Adicionar mais opções de datas conforme necessário -->
+            </select>
+        </section>
+
+        <section id="movieList">
+            <!-- A lista de filmes será exibida aqui conforme a seleção de data -->
+        </section>
+    </main>
+
+    <!-- Rodapé da página com informações de contato -->
+    <footer>
+        <address class="final">
+            Entre em contato conosco:
+            <a href="festivaldegramadooficial2024S@gmail.com">Email de Contato</a>
+            Telefone: +55 (54) 97458-0206
+            <br />
+            Endereço: Av. Borges de Medeiros 2659, Gramado, RS, 95670-000
+        </address>
+        <p>&copy; 2024 Festival de Cinema de Gramado. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Inclusão do jQuery e do arquivo JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="programacao.js"></script>
+</body>
+</html>

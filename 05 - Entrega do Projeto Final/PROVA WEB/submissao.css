@@ -1,0 +1,171 @@
+/* submissao.css */
+
+/* Estilos específicos para a página de Submissão de Filmes */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+#toggleMenu:hover {
+  background-color: #ddd;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.submissao-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px; /* Espaçamento do topo */
+}
+
+.submissao-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.submissao-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submissao-form label {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.submissao-form input[type="text"],
+.submissao-form input[type="file"],
+.submissao-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.submissao-form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submissao-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.final {
+  font-size: 0.8rem;
+}
+
+/* Estilos específicos para telas menores */
+@media (max-width: 768px) {
+  header {
+      padding: 10px;
+  }
+
+  header h1 {
+      font-size: 1.5em;
+  }
+
+  #toggleMenu {
+      display: block;
+  }
+
+  nav {
+      width: 100%;
+      height: auto;
+      position: static;
+      display: none;
+  }
+
+  main {
+      margin-left: 0;
+      padding: 20px;
+  }
+
+  footer {
+      position: static;
+      margin-top: 20px;
+  }
+
+  nav.open {
+      display: block;
+  }
+}

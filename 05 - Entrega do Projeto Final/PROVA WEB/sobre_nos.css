@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center; /* Centralizar verticalmente */
+}
+
+header h1 {
+  margin: 0;
+  text-align: center; /* Centralizar horizontalmente */
+  /* Para ocupar o espaço restante */
+}
+
+#toggleMenu {
+  position: absolute;
+  right: 20px; /* Ajusta a posição do botão do menu */
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: none; /* Escondendo a barra lateral inicialmente */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+section {
+  margin-left: 220px; /* Considerando a largura da barra lateral */
+  padding: 20px;
+  min-height: calc(90vh - 60px); /* Considerando a altura do header e do footer */
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1rem 10rem;
+  
+}
+
+.texto {
+  text-align: justify;
+  font-size: medium;
+}
+
+.final {
+  font-size: 0.8rem;
+}
+

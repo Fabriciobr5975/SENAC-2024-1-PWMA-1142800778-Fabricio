@@ -1,0 +1,204 @@
+/* Estilos gerais */
+* {
+    box-sizing: border-box; /* Ajusta o box model para incluir padding e border no total da largura e altura */
+}
+
+html, body {
+    height: 100%; /* Define a altura de html e body como 100% */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organiza o body como uma coluna flexível */
+    min-height: 100vh; /* Define a altura mínima como 100% da altura da janela */
+}
+
+header {
+    background-color: #333; /* Define a cor de fundo do cabeçalho */
+    color: #fff; /* Define a cor do texto no cabeçalho */
+    padding: 20px; /* Adiciona espaçamento interno */
+    display: flex;
+    justify-content: space-between; /* Espaça os itens igualmente no cabeçalho */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+header h1 {
+    margin: 0; /* Remove a margem */
+    text-align: center; /* Centraliza o texto */
+    flex-grow: 1; /* Permite que o h1 cresça para ocupar o espaço disponível */
+}
+
+#toggleMenu:hover {
+    background-color: #ddd; /* Muda a cor de fundo ao passar o mouse */
+}
+
+nav {
+    background-color: #333; /* Define a cor de fundo da navegação */
+    color: #fff; /* Define a cor do texto da navegação */
+    width: 200px; /* Define a largura da navegação */
+    height: 100%; /* Define a altura como 100% */
+    position: fixed; /* Fixa a navegação */
+    top: auto;
+    left: auto;
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    display: none; /* Esconde a barra lateral inicialmente */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores das listas */
+    padding: 0; /* Remove o padding */
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Adiciona margem inferior aos itens da lista */
+}
+
+nav ul li a {
+    display: block; /* Exibe os links como blocos */
+    padding: 10px; /* Adiciona espaçamento interno aos links */
+    color: #fff; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove a decoração do texto dos links */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Muda a cor de fundo ao passar o mouse */
+}
+
+nav.open {
+    display: block; /* Exibe a navegação quando aberto */
+}
+
+main {
+    flex-grow: 1; /* Permite que o main cresça para ocupar o espaço disponível */
+    margin-left: 220px; /* Adiciona margem à esquerda */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+#parallelEvents {
+    background-color: #f9f9f9; /* Define a cor de fundo da seção */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+#parallelEvents h2 {
+    color: #333; /* Define a cor do texto do h2 */
+    margin-top: 0; /* Remove a margem superior */
+}
+
+#eventFormContainer {
+    margin-bottom: 30px; /* Adiciona margem inferior */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #fff; /* Define a cor de fundo do container */
+    border: 1px solid #ccc; /* Adiciona borda */
+    border-radius: 5px; /* Define bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+}
+
+#addEventForm {
+    display: inline-block; /* Exibe o formulário como bloco inline */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+#addEventForm label {
+    margin-bottom: 5px; /* Adiciona margem inferior aos labels */
+    font-weight: bold; /* Define o peso da fonte como bold */
+    display: block; /* Exibe os labels como blocos */
+}
+
+#addEventForm input[type="text"],
+#addEventForm input[type="date"],
+#addEventForm input[type="time"],
+#addEventForm textarea {
+    margin-bottom: 10px; /* Adiciona margem inferior */
+    padding: 10px; /* Adiciona espaçamento interno */
+    border: 1px solid #ccc; /* Adiciona borda */
+    border-radius: 3px; /* Define bordas arredondadas */
+    width: 100%; /* Define a largura como 100% */
+    max-width: 500px; /* Define a largura máxima */
+}
+
+#addEventForm button[type="submit"] {
+    width: 150px; /* Define a largura do botão */
+    padding: 10px; /* Adiciona espaçamento interno */
+    background-color: #007bff; /* Define a cor de fundo do botão */
+    color: #fff; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Define bordas arredondadas */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    align-self: center; /* Alinha o botão ao centro */
+}
+
+#addEventForm button[type="submit"]:hover {
+    background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
+}
+
+#eventsListContainer {
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #fff; /* Define a cor de fundo */
+    border: 1px solid #ccc; /* Adiciona borda */
+    border-radius: 5px; /* Define bordas arredondadas */
+}
+
+#eventsListContainer h3 {
+    margin-top: 0; /* Remove a margem superior */
+}
+
+#eventsList .event {
+    background-color: #fff; /* Define a cor de fundo dos eventos */
+    border: 1px solid #ccc; /* Adiciona borda */
+    border-radius: 5px; /* Define bordas arredondadas */
+    padding: 10px; /* Adiciona espaçamento interno */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+footer {
+    background-color: #333; /* Define a cor de fundo do rodapé */
+    color: #fff; /* Define a cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Adiciona espaçamento interno */
+    width: 100%; /* Define a largura como 100% */
+    position: relative; /* Posiciona o rodapé de forma relativa */
+    margin-top: auto; /* Adiciona margem superior automática */
+}
+
+.final {
+    font-size: 0.8rem; /* Define o tamanho da fonte menor */
+}
+
+/* Estilos específicos para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* Reduz o espaçamento interno do cabeçalho */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Reduz o tamanho da fonte do título */
+    }
+
+    #toggleMenu {
+        display: block; /* Exibe o botão de alternância do menu */
+    }
+
+    nav {
+        width: 100%; /* Define a largura da navegação como 100% */
+        height: auto; /* Define a altura automática */
+        position: static; /* Posiciona de forma estática */
+        display: none; /* Esconde a navegação */
+    }
+
+    main {
+        margin-left: 0; /* Remove a margem à esquerda */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    footer {
+        position: static; /* Posiciona de forma estática */
+        margin-top: 20px; /* Adiciona margem superior */
+    }
+
+    nav.open {
+        display: block; /* Exibe a navegação quando aberto */
+    }
+}

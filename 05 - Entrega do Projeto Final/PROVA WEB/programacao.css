@@ -1,0 +1,145 @@
+/* Estilos gerais */
+* {
+    box-sizing: border-box; /* Garante que o padding e o border sejam incluídos na largura e altura total dos elementos */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Define a fonte padrão da página */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #333; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+    padding: 20px; /* Espaçamento interno do cabeçalho */
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos no cabeçalho */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+header h1 {
+    margin: 0;
+    text-align: center; /* Centraliza o texto do título */
+    flex-grow: 1; /* Permite que o título ocupe o espaço disponível */
+}
+
+/* Estilos para a barra lateral de navegação */
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    position: fixed; /* Fixa a barra lateral na tela */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    display: none; /* Inicialmente a barra lateral está escondida */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    display: block; /* Exibe o link como bloco */
+    padding: 10px;
+    color: #fff;
+    text-decoration: none; /* Remove a sublinhado dos links */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Muda a cor de fundo ao passar o mouse sobre o link */
+}
+
+#navMenu.open {
+    display: block; /* Exibe a barra lateral quando a classe "open" é adicionada */
+}
+
+/* Estilos para a seção principal */
+main {
+    flex-grow: 1; /* Permite que o main ocupe o espaço disponível */
+    margin-left: 220px; /* Espaço à esquerda para a barra lateral */
+    padding: 20px;
+}
+
+#dateSelector {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+#movieList {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    gap: 10px; /* Espaçamento entre os itens */
+    max-height: calc(100vh - 200px); /* Define a altura máxima */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+}
+
+.movie-item {
+    border: 1px solid #ccc; /* Borda dos itens */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Arredondamento das bordas */
+    background-color: #f9f9f9; /* Cor de fundo dos itens */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center; /* Centraliza o texto */
+    padding: 10px;
+}
+
+.final {
+    font-size: 0.8rem; /* Tamanho da fonte */
+}
+
+/* Estilos específicos para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    #toggleMenu {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    footer {
+        position: static;
+        margin-top: 20px;
+    }
+
+    nav.open {
+        display: block;
+    }
+}

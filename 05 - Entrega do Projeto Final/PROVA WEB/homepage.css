@@ -1,0 +1,171 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+#toggleMenu {
+    position: absolute;
+    right: 20px; /* Ajusta a posição do botão do menu */
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    display: none; /* Escondendo a barra lateral inicialmente */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    margin-left: 220px; /* Considerando a largura da barra lateral */
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* Considerando a altura do header e do footer */
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para a página inicial */
+.section-home {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center; /* Centraliza o texto e o botão */
+    margin: 0 auto; /* Centraliza a seção */
+    width: 80%; /* Largura ajustável */
+}
+
+.section-home h2 {
+    color: #333;
+}
+
+.section-home p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.section-home .btn {
+    display: inline-block;
+    width: auto;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.section-home .btn:hover {
+    background-color: #0056b3;
+}
+
+.final {
+    font-size: 0.8rem;
+}
+
+/* Estilos para o carrossel de fotos */
+.carousel {
+    position: relative;
+    width: 100%; /* Ajusta a largura do carrossel */
+    max-width: 1000px; /* Tamanho máximo do carrossel */
+    margin: 20px auto; /* Centraliza o carrossel */
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 67%;
+    transition: opacity 1s ease;
+    display: none;
+    border: 1.5px solid #333;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Estilos para o vídeo */
+.video {
+    text-align: center;
+    margin: 20px auto; /* Centraliza o vídeo */
+}
+
+.video iframe {
+    max-width: 100%;
+    height: 315px;
+    width: 560px;
+}
