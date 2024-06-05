@@ -2,11 +2,11 @@
 document.getElementById('toggleMenu').addEventListener('click', function() {
     const sidebar = document.getElementById('sidebar');
     if (sidebar.style.display === 'block') {
-        sidebar.style.display = 'none'; // Esconde a barra lateral se estiver visível
+        sidebar.style.display = 'none';
     } else {
-        sidebar.style.display = 'block'; // Mostra a barra lateral se estiver escondida
+        sidebar.style.display = 'block';
     }
-});
+  });
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.form-container');
@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para exibir os comentários
     function displayComentarios() {
-        comentariosList.innerHTML = ''; // Limpa a lista de comentários
+        comentariosList.innerHTML = '';
         comentarios.forEach((comentario, index) => {
             const comentarioDiv = document.createElement('div');
-            comentarioDiv.classList.add('comentario'); // Adiciona a classe 'comentario' ao div
+            comentarioDiv.classList.add('comentario');
             comentarioDiv.innerHTML = `
                 <h3>${comentario.title}</h3>
                 <p><strong>Nota:</strong> ${comentario.rating}</p>
                 <p>${comentario.comments}</p>
             `;
-            comentariosList.appendChild(comentarioDiv); // Adiciona o div do comentário à lista
+            comentariosList.appendChild(comentarioDiv);
         });
     }
 
@@ -35,16 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Adiciona um novo comentário
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Previne o envio do formulário
+        event.preventDefault();
         const title = document.getElementById('movieTitle').value;
         const rating = document.getElementById('movieRating').value;
         const comments = document.getElementById('movieComments').value;
 
-        const comentario = { title, rating, comments }; // Cria um objeto com os dados do comentário
-        comentarios.push(comentario); // Adiciona o novo comentário à lista
-        localStorage.setItem('comentarios', JSON.stringify(comentarios)); // Armazena a lista atualizada no localStorage
-        displayComentarios(); // Atualiza a exibição dos comentários
+        const comentario = { title, rating, comments };
+        comentarios.push(comentario);
+        localStorage.setItem('comentarios', JSON.stringify(comentarios));
+        displayComentarios();
 
-        form.reset(); // Reseta o formulário
+        form.reset();
     });
 });
+

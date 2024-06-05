@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: auto;
+    left: auto;
+    overflow-y: auto;
+    display: none; /* Escondendo a barra lateral inicialmente */
+  }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    flex-grow: 1;
+    margin-left: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-avaliacao,
+.section-comentarios {
+    margin-bottom: 20px;
+}
+
+.section-avaliacao {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.section-avaliacao h2 {
+    margin-top: 0;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.form-container button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.section-comentarios {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.section-comentarios h2 {
+    margin-top: 0;
+}
+
+.comentarios-list .comentario {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+.final {
+    font-size: 0.8rem;
+}
+
+/* Estilos específicos para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    #toggleMenu {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    footer {
+        position: static;
+        margin-top: 20px;
+    }
+
+    nav.open {
+        display: block;
+    }
+}

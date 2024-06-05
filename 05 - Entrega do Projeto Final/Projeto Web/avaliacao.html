@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Venda de Ingressos - Festival de Cinema de Gramado</title>
-    <!-- Link para o arquivo de estilo CSS -->
-    <link rel="stylesheet" href="venda_ingressos.css" />
+    <title>Avaliação de Filmes - Festival de Cinema de Gramado</title>
+    <link rel="stylesheet" href="avaliacao.css" />
 </head>
 <body>
     <header>
         <h1>Festival de Cinema de Gramado</h1>
-        <!-- Botão para abrir/fechar o menu lateral -->
         <button id="toggleMenu">Menu</button>
     </header>
-
-    <!-- Menu lateral -->
-    <nav id="sidebar">
+    <nav id="sidebar" class="sidebar">
         <ul>
             <li><a href="homepage.html">Página Inicial</a></li>
             <li><a href="submissao.html">Submissão de Filmes</a></li>
@@ -26,16 +22,34 @@
             <li><a href="sobre_nos.html">Sobre Nós</a></li>
         </ul>
     </nav>
+    
+    <main>
+        <section class="section-avaliacao">
+            <h2>Avaliação de Filmes</h2>
+            <form class="form-container">
+                <label for="movieTitle">Título do Filme:</label>
+                <input type="text" id="movieTitle" name="movieTitle" required />
 
-    <!-- Seção principal para compra/venda de ingressos -->
-    <section id="tickets">
-        <h2>Compra/Venda de Ingressos</h2>
-        <div id="sessions"></div>
-    </section>
+                <label for="movieRating">Nota do Filme:</label>
+                <input type="number" id="movieRating" name="movieRating" min="0" max="10" step="0.1" required />
+
+                <label for="movieComments">Comentários:</label>
+                <textarea id="movieComments" name="movieComments" rows="4" required></textarea>
+
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </section>
+
+        <section class="section-comentarios">
+            <h2>Comentários dos Filmes</h2>
+            <div class="comentarios-list" id="comentariosList">
+                <!-- Espaço para listar os comentários dos filmes -->
+            </div>
+        </section>
+    </main>
 
     <footer>
         <address class="final">
-            <!-- Informações de contato -->
             Entre em contato conosco:
             <a href="festivaldegramadooficial2024S@gmail.com">Email de Contato</a>
             Telefone: +55 (54) 97458-0206
@@ -45,9 +59,7 @@
         <p>&copy; 2024 Festival de Cinema de Gramado. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Inclusão da biblioteca jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Inclusão do arquivo de script -->
-    <script src="venda_ingressos.js"></script>
+    <script src="avaliacao.js"></script>
 </body>
 </html>
